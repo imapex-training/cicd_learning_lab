@@ -1,3 +1,0 @@
-
-## Laptop or Workstation
-
