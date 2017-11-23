@@ -1223,7 +1223,7 @@ deploy:
             username: $$MANTL_USERNAME
             password: $$MANTL_PASSWORD
         urls:
-            - https://$$MANTL_CONTROL/marathon/v2/apps/class/$$DOCKER_USERNAME/restart?force=true
+            - https://$$MANTL_CONTROL/v2/apps/class/$$DOCKER_USERNAME/restart?force=true
 ```
 
 [item]: # (/slide)
@@ -1484,7 +1484,7 @@ Okay, so drone said it did something and we got a Spark message... but you may b
 5. Drone checks the _.drone.yml_ file and executes the commands in the _deploy_ phase. In this phase, the following actions will take place: 
   * Drone sends a WebHook command to Marathon to cause an application restart
   * Marathon pulls the new container from hub.docker.com containing the code changes
-6. Drone checks the _.drone.yml_ file and executes the commands in the _notify_ phase. During notification, Drone will check the staus of the build and then send notifications to the Spark room.
+6. Drone checks the _.drone.yml_ file and executes the commands in the _notify_ phase. During notification, Drone will check the status of the build and then send notifications to the Spark room.
   * If the build was successful, send a Success notification
   * If the build failed, send a Failure notificiation and blame someone.
 
@@ -1765,7 +1765,7 @@ Okay, so let's review the steps in the full pipeline.
 5. Drone checks the _.drone.yml_ file and executes the commands in the _deploy_ phase. In this phase, the following actions will take place: 
   * Drone sends a WebHook command to Marathon to cause an application restart
   * Marathon pulls the new container from hub.docker.com containing the code changes
-6. Drone checks the _.drone.yml_ file and executes the commands in the _notify_ phase. During notification, Drone will check the staus of the build and then send notifications to the Spark room.
+6. Drone checks the _.drone.yml_ file and executes the commands in the _notify_ phase. During notification, Drone will check the status of the build and then send notifications to the Spark room.
   * If the build was successful, send a Success notification
   * If the build failed, send a Failure notificiation and blame someone.
 
